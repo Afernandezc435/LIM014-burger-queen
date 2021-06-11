@@ -2,10 +2,10 @@ import React from 'react';
 import Header from "./Header"
 
 const Layout = ({children}) => {
-  return ( <div className="Main">
+  return ( <section >
     <Header/>
     {children}
-  </div> );
+  </section> );
 }
  
 export default Layout;

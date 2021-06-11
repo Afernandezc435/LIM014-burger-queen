@@ -1,50 +1,34 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
+const Products = ({ product, cart, setCart, Products }) => {
+  const { id, name, price, img } = product;
 
-const Product = ({ product, cart, setCart, Products}) => {
-  const { id, name, price, img} = product;
-
-const addListProduct = () => {
-  const exist = cart.find((products) => products.id === product.id);
-  if (exist) {
-    setCart(
-      cart.map((products) =>
-        products.id === product.id ? { ...exist, qty: exist.qty + 1 } : products
-      )
-    );
-  } else {
-    setCart([...cart, { ...product, qty: 1 }]);
-  }
-}
-
-const deleteListProduct = () =>{
-  const exist = cart.find((products) => products.id === product.id);
-    if (exist.qty === 1) {
-      setCart(cart.filter((products) => products.id !== product.id));
-    } else {
+  const addListProduct = () => {
+    const existProduct = cart.find((products) => products.id === product.id);
+    if (existProduct) {
       setCart(
         cart.map((products) =>
-          products.id === product.id ? { ...exist, qty: exist.qty - 1 } : products
+          products.id === product.id ? { ...existProduct, quantity: existProduct.quantity + 1 } : products
         )
       );
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
     }
-}
+  }
 
   return (
-    <div>
-      <div className="profile-content">
+    <section>
+      <section className="profile-content">
         {Products ? ((<img src={img} alt="coffe" width="80px" />))
           : (<></>)}
-        <div>{name}</div>
-        {Products ? ((<div>${price}</div>))
+        <section>{name}</section>
+        {Products ? ((<section>${price}</section>))
           : (<></>)}
-      </div>
-      {Products ? ((<button className='btnAgregar' type="button" onClick={() => addListProduct(id)}>Agregar</button>))
-        : (<FontAwesomeIcon icon={faTrash} onClick={() => deleteListProduct(id)} />)}
-    </div>
+      </section>
+      {Products ? ((<button className='btnAdd' type="button" onClick={() => addListProduct(id)}>Agregar</button>))
+        : (<></>)}
+    </section>
   )
 };
 
-export default Product
+export default Products

@@ -1,24 +1,24 @@
 .navHeader {
-    font-size: 20px;
-  }
-  .navHeader ul {
-    display: flex;
-  }
-  .navHeader ul li {
-    height: 100%;
-    margin-right: 10px;
-    display: flex;
-  }
-  .navHeader ul li a {
-    color: white;
-    text-decoration: none;
-    border-left: 3px solid #b79c6f;
-    padding-left: 20px;
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    grid-area: header;
-    background-color: #0a071a94;
-    align-items: center;
-  }
+  font-size: 20px;
+}
+.navHeader ul {
+  display: flex;
+}
+.navHeader ul li {
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+}
+.navHeader ul li a {
+  color: white;
+  text-decoration: none;
+  border-left: 3px solid #b79c6f;
+  padding-left: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  grid-area: header;
+  background-color: #0a071a94;
+  align-items: center;
+}

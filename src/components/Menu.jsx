@@ -1,65 +1,62 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Product from './Products';
-import OrderBreakFast from "./Cart"
+import Cart from "./Cart"
 import db from '../firebase/config'
 
 const Menu = () => {
-  const [Products, setMenu] = useState([]);
+  const [Menu, setMenu] = useState([]);
   const [Type, setType] = useState('breakfast');
 
   useEffect(() => {
     db.collection('products')
-      .onSnapshot(snap => {
+      .get().then(snap => {
         const documents = [];
         snap.forEach(doc => {
-            documents.push({ id: doc.id, ...doc.data() })
+          documents.push({ id: doc.id, ...doc.data() })
         });
         setMenu(documents.filter(doc => doc.type === Type));
       })
-  }, [Products, Type])
-  
+  }, [Type])
+
 
   const [cart, setCart] = useState([])
 
   return (
     <body className="grid-container">
       <nav className="navbar">
-            <ul>
-            <li onClick={() => { setType('breakfast');}}>Desayuno</li>
-            <li onClick={() => { setType('lunch'); }}>Fuerte</li>
-            </ul>
-          </nav>
+          <button className="btnBreakFast" onClick={() => { setType('breakfast'); }}>Desayuno</button>
+          <button className="btnLuch" onClick={() => { setType('lunch'); }}>Fuerte</button>
+      </nav>
       <main className="main">
         <section>
           <Fragment >
             <section className="containerBox">
-            <section className="cards">
+              <section className="cards">
                 {
-                  Products.filter(product => product.type === Type).map((product) => (
-                    
+                  Menu.filter(product => product.type === Type).map((product) => (
+
                     <Product
                       key={product.id}
                       product={product}
                       cart={cart}
                       setCart={setCart}
-                      Products={Products}
+                      Products={Menu}
                       img={product.img}
                     />
-                  
+
                   ))
                 }
-             </section>
+              </section>
             </section>
           </Fragment>
         </section>
       </main>
       <aside className="sidebar">
-      <OrderBreakFast 
-            cart={cart}
-            setCart={setCart}
-            
-            />
-            </aside>
+        <Cart
+          cart={cart}
+          setCart={setCart}
+        />
+      </aside>
     </body>
   );
 };

@@ -1,0 +1,70 @@
+/*Carrito de compras*/
+.sidebar {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  grid-area: sidebar;
+  background-color: #baa035;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  height: 35px;
+  border-bottom: 1px solid rgb(210, 220, 250);
+  color: black;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: white;
+}
+.result {
+  text-align: left;
+}
+span {
+  color: black;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.input {
+  background-color: #957d1b;
+  border-radius: 10px;
+  height: 30px;
+  color: white;
+}
+.btnCancel {
+  width: 120px;
+  height: 35px;
+  margin-top: 5%;
+  background: #56493f;
+  color: white;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.btnCancel:hover {
+  background: red;
+}
+.btnSend {
+  width: 120px;
+  height: 35px;
+  margin-top: 5%;
+  background: #6d422d;
+  color: white;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.btnSend:hover {
+  background: red;
+}
+.deleteListProduct {
+  text-decoration: none;
+}

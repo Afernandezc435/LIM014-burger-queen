@@ -1,0 +1,52 @@
+.navbar {
+  grid-area: navbar;
+}
+.navbar button {
+  padding: 16px 86px;
+  color: white;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 12px;
+}
+.btnBreakFast {
+  background: #6d422d;
+}
+.btnLuch {
+  background-color: #56493f;
+}
+.btnBreakFast:hover {
+  background: red;
+}
+.btnLuch:hover {
+  background: red;
+}
+/*CARDS*/
+section.cards {
+  columns: 2;
+}
+
+.profile-card {
+  width: 270px;
+  height: 250px;
+  margin: 20px 10px 10px 10px;
+}
+
+.profile-content {
+  padding: 15px;
+}
+
+.btnAdd {
+  background-color: #6d422d;
+  color: #ffffff;
+  width: 150px;
+  cursor: pointer;
+  height: 38px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px 3px #e6e6e6;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.btnAdd:hover {
+  background: red;
+}

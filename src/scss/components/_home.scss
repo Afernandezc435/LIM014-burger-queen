@@ -9,13 +9,13 @@ body {
 .logo {
   height: 100px;
 }
-.formacion {
+.containerHome {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
 }
-.alineacion {
+.marginHome {
   display: inline-block;
   position: relative;
   padding: 2px;
@@ -24,7 +24,7 @@ body {
 .buttonHome {
   position: absolute;
   margin-top: 120%;
-  right: 1em;
+  right: 0em;
   background-color: $colorButton;
   border-radius: 1.5em;
   color: white;
