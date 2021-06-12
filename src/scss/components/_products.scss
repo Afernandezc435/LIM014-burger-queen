@@ -1,0 +1,52 @@
+.containerCards {
+  padding: 15px;
+}
+
+.contentCards {
+  background-color: #baa035;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  width: 350px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.previewCards {
+  background-color: #baa035;
+  color: #fff;
+  padding: 30px;
+}
+
+.infoCards {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.btnAdd {
+  background-color: #6d422d;
+  color: #ffffff;
+  width: 150px;
+  cursor: pointer;
+  height: 38px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px 3px #e6e6e6;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.btnAdd:hover {
+  background: red;
+}
+
+@media screen and (max-width: 480px) {
+  .social-panel-container.visible {
+    transform: translateX(0px);
+  }
+
+  .floating-btn {
+    right: 10px;
+  }
+}

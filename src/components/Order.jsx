@@ -4,22 +4,14 @@ import db from "../firebase/config";
 const ChefOrder = ({ order }) => {
   const { id, name, products } = order;
 
-  function finish(evt) {
+  async function finish(evt) {
     evt.preventDefault();
     evt.target.style.display = "none";
     evt.target.parentNode.parentNode.parentNode.parentNode.style.display =
       "none";
-    db.collection("orders")
-      .doc(id)
-      .update({
-        status: "delivered",
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    await db.collection("orders").doc(id).update({
+      status: "delivered",
+    });
   }
 
   return (
