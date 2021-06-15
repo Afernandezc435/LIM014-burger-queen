@@ -1,8 +1,8 @@
 .card {
-  border-radius: 4px;
+  border-radius: 20px;
   padding: 5px;
   text-align: center;
-  background-color: #baa035;
+  background-color: #6d422d96;
   margin-left: 10px;
   margin-top: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -13,9 +13,31 @@
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+.cardChef {
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  background-color: #6d422d96;
+  margin-left: 10px;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+.cardChef:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 h5 {
   text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+h6 {
+  border-radius: 4px;
+  color: white;
   font-size: 25px;
+  background-color: #0a071a54;
+  width: 40%;
 }
 .btnStop {
   width: 120px;
@@ -25,6 +47,25 @@ h5 {
   color: white;
   border-radius: 10px;
 }
+.btnStop:hover {
+  background: #bda274;
+}
+.btnStop:active {
+  background: #bda274;
+}
+.btnStop:focus {
+  outline: 0;
+}
 .temporize {
-  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.time {
+  margin-top: 4%;
+}
+@media screen and (max-width: 480px) {
+  .cards {
+    columns: 1;
+  }
 }

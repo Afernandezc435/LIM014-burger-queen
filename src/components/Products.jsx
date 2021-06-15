@@ -20,28 +20,30 @@ const Products = ({ product, cart, setCart, Products }) => {
 
   return (
     <section className="containerCards">
-      <section>
-        <div class="contentCards">
-          <div class="previewCards">
-            {Products ? <img src={img} alt="coffe" width="80px" /> : <></>}
+      <div className="contentCards">
+        {Products ? (
+          <div className="previewCards">
+            <img src={img} alt="coffe" width="80px" />
           </div>
-          <div class="infoCards">
-            <section>{name}</section>
-            {Products ? <section>${price}</section> : <></>}
-            {Products ? (
-              <button
-                className="btnAdd"
-                type="button"
-                onClick={() => addListProduct(id)}
-              >
-                Agregar
-              </button>
-            ) : (
-              <></>
-            )}
-          </div>
+        ) : (
+          <></>
+        )}
+        <div className="infoCards">
+          <section>{name}</section>
+          {Products ? <section>${price}</section> : <></>}
+          {Products ? (
+            <button
+              className="btnAdd"
+              type="button"
+              onClick={() => addListProduct(id)}
+            >
+              Agregar
+            </button>
+          ) : (
+            <></>
+          )}
         </div>
-      </section>
+      </div>
     </section>
   );
 };

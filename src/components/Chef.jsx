@@ -19,10 +19,17 @@ const Chef = () => {
   }, []);
 
   return (
-    <section className="cards">
-      {orders.map((order) => (
-        <ChefOrder key={order.id} order={order} />
-      ))}
+    <section>
+      <section className="cardsContainer">
+        {orders.map((order) => (
+          <ChefOrder key={order.id} order={order} />
+        ))}
+      </section>
+      <p>
+        <a href="/" className="btnExit">
+          Exit
+        </a>
+      </p>
     </section>
   );
 };

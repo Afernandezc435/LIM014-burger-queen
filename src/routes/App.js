@@ -7,7 +7,7 @@ import Chef from "../components/Chef";
 import ChefOrder from "../components/ChefOrder";
 import WaiterOrder from "../components/WaiterOrder";
 import Layout from "../components/Layout";
-import NotFound from "../components/NotFound";
+/* import NotFound from "../components/NotFound"; */
 import "../scss/app.scss";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
           <Route path="/cart" component={Cart} />
           <Route path="/waiterOrder" component={WaiterOrder} />
         </Layout>
-        <Route component={NotFound} />S
+        {/*  <Route component={NotFound} /> */}
       </Switch>
     </BrowserRouter>
   );

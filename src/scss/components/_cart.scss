@@ -1,33 +1,13 @@
-/*Carrito de compras*/
-.sidebar {
-  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-  grid-area: sidebar;
-  background-color: #baa035;
-}
-
-table {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 5%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-th {
-  height: 35px;
-  border-bottom: 1px solid rgb(210, 220, 250);
-  color: black;
-}
-
-tfoot {
+.order {
+  font-size: 1.5em;
+  padding-bottom: 13px;
+  text-transform: uppercase;
   font-weight: bold;
 }
-
-tr:hover {
-  background-color: white;
-}
 .result {
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  margin-left: 60%;
 }
 span {
   color: black;
@@ -35,11 +15,13 @@ span {
   padding-right: 10px;
 }
 
-.input {
-  background-color: #957d1b;
-  border-radius: 10px;
+input {
+  background: #6d422d6e;
+  border-radius: 20px;
   height: 30px;
   color: white;
+  font-weight: bold;
+  padding: 5px;
 }
 .btnCancel {
   width: 120px;
@@ -51,7 +33,7 @@ span {
   font-family: "Poppins", sans-serif;
 }
 .btnCancel:hover {
-  background: red;
+  background: #bda274;
 }
 .btnSend {
   width: 120px;
@@ -63,8 +45,34 @@ span {
   font-family: "Poppins", sans-serif;
 }
 .btnSend:hover {
-  background: red;
+  background: #bda274;
 }
 .deleteListProduct {
   text-decoration: none;
+}
+.thead ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.tbody ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  font-weight: bold;
+}
+
+section.tfoot {
+  display: flex;
+}
+.iconTrash {
+  margin-left: 5px;
+}
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
 }

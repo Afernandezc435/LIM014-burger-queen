@@ -49,65 +49,68 @@ const Cart = ({ cart, setCart }) => {
   }
 
   return (
-    <section>
-      <h1>Orden</h1>
-      <form type="submit" action="">
-        <span>Cliente:</span>
-        <input type="text" ref={inputName} />
-        <table>
-          <thead>
-            <tr>
-              <th>Cantidad</th>
-              <th>Producto</th>
-              <th>Precio</th>
-              <th>Eliminar</th>
-            </tr>
-          </thead>
-          {cart.length === 0 ? (
-            <td>Cart Is Empty</td>
-          ) : (
-            cart.map((product) => (
-              <tbody>
-                <tr>
-                  <td> {product.quantity} </td>
-                  <td>
-                    <Products
-                      key={product.id}
-                      product={product}
-                      cart={cart}
-                      setCart={setCart}
-                    />
-                  </td>
-                  <td> ${product.price}</td>
-                  <td>
-                    <FontAwesomeIcon
-                      icon={faTrash}
-                      onClick={() => deleteListProduct(product.id)}
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            ))
-          )}
-        </table>
-        <hr></hr>
-        <tfoot>
-          <tr className="result">
-            <td colspan="2"> Total</td>
-            <td>
+    <section className="grid-container">
+      <section>
+        <h1 className="order">Orden</h1>
+        <form type="submit" action="">
+          <span>Cliente:</span>
+          <input type="text" ref={inputName} />
+          <section className="table">
+            <section className="thead">
+              <ul className="tr">
+                <li>Cantidad</li>
+                <li>Producto</li>
+                <li>Precio</li>
+                <li>Eliminar</li>
+              </ul>
+            </section>
+            <hr />
+            {cart.length === 0 ? (
+              <span>Cart Is Empty</span>
+            ) : (
+              cart.map((product) => (
+                <section className="tbody" key={product.id}>
+                  <ul className="tr">
+                    <li className="li"> {product.quantity} </li>
+                    <li className="li">
+                      <Products
+                        key={product.id}
+                        product={product}
+                        cart={cart}
+                        setCart={setCart}
+                      />
+                    </li>
+                    <li className="li"> ${product.price}</li>
+                    <li className="li">
+                      <FontAwesomeIcon
+                        className="iconTrash"
+                        icon={faTrash}
+                        onClick={() => deleteListProduct(product.id)}
+                      />
+                    </li>
+                  </ul>
+                </section>
+              ))
+            )}
+          </section>
+          <hr></hr>
+          <section className="tfoot">
+            <p className="result"></p>
+            <p colSpan="2"> Total</p>
+            <p>
               {" "}
               <strong>${parseFloat(itemsPrice).toFixed(2)}</strong>{" "}
-            </td>
-          </tr>
-        </tfoot>
-        <hr></hr>
-        <button onClick={cancelOrder} className="btnCancel">
-          Cancelar
-        </button>
-        <button onClick={sendOrder} className="btnSend">
-          Enviar
-        </button>
-      </form>
+            </p>
+          </section>
+          <hr></hr>
+          <button onClick={cancelOrder} className="btnCancel">
+            Cancelar
+          </button>
+          <button onClick={sendOrder} className="btnSend">
+            Enviar
+          </button>
+        </form>
+      </section>
     </section>
   );
 };

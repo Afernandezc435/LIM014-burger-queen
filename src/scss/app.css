@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap");
+body {
+  background: #b79d6f50;
+}
+
+.App {
+  text-align: center;
+}
+
+.logo {
+  height: 100px;
+}
+
+.containerHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.marginHome {
+  display: inline-block;
+  position: relative;
+  padding: 2px;
+}
+
+.buttonHome {
+  position: absolute;
+  margin-top: 120%;
+  right: 0em;
+  background-color: #6d422d;
+  border-radius: 1.5em;
+  color: white;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+}
+
+.navHeader {
+  font-size: 20px;
+}
+
+.navHeader ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navHeader ul li {
+  height: 100%;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navHeader ul li a {
+  color: white;
+  text-decoration: none;
+  border-left: 3px solid #b79c6f;
+  padding-left: 20px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-area: header;
+  background-color: #0a071a94;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.navbar button {
+  padding: 16px 50px;
+  color: white;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btnBreakFast {
+  background: #6d422d;
+}
+
+.btnLuch {
+  background-color: #56493f;
+}
+
+.btnBreakFast:hover {
+  background: red;
+}
+
+.btnLuch:hover {
+  background: red;
+}
+
+/*CARDS*/
+section.cards {
+  -webkit-columns: 2;
+  columns: 2;
+}
+
+.profile-card {
+  width: 270px;
+  height: 250px;
+  margin: 20px 10px 10px 10px;
+}
+
+.profile-content {
+  padding: 15px;
+}
+
+.btnAdd {
+  background-color: #6d422d;
+  color: #ffffff;
+  width: 150px;
+  cursor: pointer;
+  height: 38px;
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-box-shadow: 3px 3px 3px 3px #e6e6e6;
+  box-shadow: 3px 3px 3px 3px #e6e6e6;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.btnAdd:hover {
+  background: red;
+}
+
+/*Carrito de compras*/
+table {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  height: 35px;
+  border-bottom: 1px solid #d2dcfa;
+  color: black;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: white;
+}
+
+.result {
+  text-align: right;
+}
+
+span {
+  color: black;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.input {
+  background-color: #957d1b;
+  border-radius: 10px;
+  height: 30px;
+  color: white;
+}
+
+.btnCancel {
+  width: 120px;
+  height: 35px;
+  margin-top: 5%;
+  background: #56493f;
+  color: white;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btnCancel:hover {
+  background: red;
+}
+
+.btnSend {
+  width: 120px;
+  height: 35px;
+  margin-top: 5%;
+  background: #6d422d;
+  color: white;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btnSend:hover {
+  background: red;
+}
+
+.deleteListProduct {
+  text-decoration: none;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  grid-area: main;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  -webkit-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  grid-area: sidebar;
+  background-color: #baa035;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 0px 20px;
+  grid-template: "navbar" 50px "main" auto "sidebar" auto;
+}
+
+.grid-container > * {
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template: "header  header" 30px "navbar  ." 50px "main sidebar" auto / auto 500px;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template: "header  header header" 100px "main sidebar" auto;
+  }
+}
+/*# sourceMappingURL=app.css.map */

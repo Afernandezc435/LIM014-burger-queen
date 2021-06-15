@@ -100,7 +100,7 @@ const ChefOrder = ({ order }) => {
           </thead>
           <tbody>
             {products.map((product) => (
-              <tr>
+              <tr key={product.id}>
                 <td> {product.quantity} </td>
                 <td>{product.name}</td>
                 <td> ${product.price}</td>
@@ -109,7 +109,7 @@ const ChefOrder = ({ order }) => {
           </tbody>
         </table>
         <hr></hr>
-        <section className="cards">
+        <section>
           <section className="temporize">
             <h2 id="crono">{timer}</h2>
             <button onClick={preparation} className="btnStop">

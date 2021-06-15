@@ -19,7 +19,7 @@ const Chef = () => {
   }, []);
 
   return (
-    <section className="cards">
+    <section className="cardsContainer">
       {orders.map((order) => (
         <Order key={order.id} order={order} />
       ))}

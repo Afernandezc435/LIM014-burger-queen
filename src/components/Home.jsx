@@ -1,26 +1,42 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+/* import { NavLink } from "react-router-dom"; */
 import "../css/App.css";
 
 const Home = () => {
   return (
-    <section className="App">
-      <img src="./img/logoBQ.png" alt="logo" />
-      <section className="containerHome">
-        <section className="marginHome">
-          <img src="./img/mozo.png" className="logo" alt="logo" />
-          <NavLink to="/waiter" className="buttonHome">
-            Mozo
-          </NavLink>
-        </section>
-        <section className="marginHome">
-          <img src="./img/cocina.png" className="logo" alt="logo" />
-          <NavLink to="/chef" className="buttonHome">
-            Chef
-          </NavLink>
-        </section>
-      </section>
-    </section>
+    <div>
+      <div className="form-container">
+        <img
+          className="logoBQ"
+          src="./img/logoBQ.png"
+          alt="logo"
+          width="100%"
+        />
+        <form className="responsive">
+          <div className="control">
+            <img className="btn" src="./img/mozo.png" alt="logo" width="100%" />
+            <p>
+              <a href="/waiter" className="buttonHome">
+                Mozo
+              </a>
+            </p>
+          </div>
+          <div className="control">
+            <img
+              className="btn"
+              src="./img/cocina.png"
+              alt="logo"
+              width="100%"
+            />
+            <p>
+              <a href="/chef" className="buttonHome">
+                Chef
+              </a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 
