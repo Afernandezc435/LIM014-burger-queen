@@ -49,7 +49,7 @@ const Cart = ({ cart, setCart }) => {
   }
 
   return (
-    <section className="grid-container">
+    <section>
       <section>
         <h1 className="order">Orden</h1>
         <form type="submit" action="">
